@@ -84,4 +84,34 @@ GROUP BY YEAR(`enrolment_date`);
 
 -- COUNT(*) 912 - 2018, 1709 - 2019, 1645 - 2020, 734 - 2021
 
---2. 
+--2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT COUNT(*) AS `teachers`, `office_address` AS 'same address'
+FROM `teachers`  
+GROUP BY `office_address`
+
+-- teachers -- same address
+-- 1 - Borgo Demis 1
+-- 8 - Borgo Elga 89
+-- 4 - Borgo Elio 234 Piano 4
+-- 1 - Borgo Ippolito 5 Piano 5
+-- 3 - Borgo Martino 82 Appartamento 07
+-- 5 - Contrada Amato 58 Piano 2
+-- 4 - Contrada Penelope 73
+-- 3 - Contrada Rita 5 Appartamento 71
+-- 3 - Contrada Santoro 17 Appartamento 30
+-- 3 - Incrocio Marini 9
+-- 2 - Incrocio Testa 142 Piano 7
+-- 1 - Piazza Aroldo 8 Appartamento 85
+-- 3 - Piazza Demian 856 Appartamento 63
+-- 3 - Piazza Ferretti 619
+-- 2 - Piazza Pellegrino 613 Piano 8
+-- 6 - Rotonda Carmela 10 Piano 1
+-- 9 - Rotonda Martinelli 309
+-- 2 - Rotonda Teseo 9
+-- 3 - Strada Concetta 6
+-- 5 - Strada Kociss 997 Piano 8
+-- 1 - Strada Lino 8
+-- 3 - Strada Lombardi 855
+-- 3 - Strada Neri 577
+-- 5 - Strada Vitali 8 Piano 0
+-- 1 - Via Elga 7 Piano 4
