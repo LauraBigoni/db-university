@@ -58,3 +58,9 @@ FROM `degrees`
 WHERE `level` = 'magistrale';
 -- COUNT(*) 38
 
+-- 7. Da quanti dipartimenti è composta l'università? (12)
+SELECT COUNT(*)
+FROM `departments`
+-- COUNT(*) 12
+
+--8. 
