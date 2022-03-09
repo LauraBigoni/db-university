@@ -1,3 +1,5 @@
+---------------- SELECT ----------------
+
 -- 1. Selezionare tutti gli studenti nati nel 1990 (160)
 SELECT `surname`, `name`, `date_of_birth` AS 'anno_di_nascita'
 FROM `students`
@@ -63,4 +65,23 @@ SELECT COUNT(*)
 FROM `departments`
 -- COUNT(*) 12
 
---8. 
+--8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+SELECT `surname`, `name`, `phone`
+FROM `teachers`
+WHERE `phone` IS NULL;
+
+SELECT COUNT(*)
+FROM `teachers`
+WHERE `phone` IS NULL;
+-- COUNT(*) 50
+
+---------------- GROUP BY ----------------
+
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+SELECT COUNT(*) AS `students`, YEAR(`enrolment_date`) AS 'year'
+FROM `students`  
+GROUP BY YEAR(`enrolment_date`);
+
+-- COUNT(*) 912 - 2018, 1709 - 2019, 1645 - 2020, 734 - 2021
+
+--2. 
